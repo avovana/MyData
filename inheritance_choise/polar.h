@@ -5,7 +5,7 @@
 
 using namespace std;
 
-class Polar : Abstract
+class Polar : public Abstract
 {
 public:
     int count() override

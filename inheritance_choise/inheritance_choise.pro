@@ -3,10 +3,12 @@ CONFIG += console c++11
 CONFIG -= app_bundle
 CONFIG -= qt
 
-SOURCES += main.cpp
+SOURCES += main.cpp \
+    worker.cpp
 
 HEADERS += \
     abstract.h \
     polar.h \
-    itotec.h
+    itotec.h \
+    worker.h
 

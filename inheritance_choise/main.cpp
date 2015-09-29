@@ -5,14 +5,14 @@
 
 using namespace std;
 
-void choise(bool isPolar, Abstract *pointer);
+Abstract *choise(bool isPolar);
 
 int main()
 {
     char ch;
     bool isPolar;
     Abstract *cutter = nullptr;
-    input:
+
     cout<<"Please, input 'p' for Polar and 'i' for Itotec"<<endl;
     cin>>ch;
 
@@ -24,18 +24,21 @@ int main()
         isPolar=0;
         break;
     default:
-        goto input;
+
         break;
     }
 
-    return 0;
+cutter = choise(isPolar);
+cout << cutter->count();
+        return 0;
 }
-/*
-void choise(bool isPolar, Abstract *pointer)
+
+Abstract *choise(bool isPolar)
 {
-
-    pointer = new Polar();
-
+    if(isPolar)
+        return new Polar();
+    else
+        return new Itotec();
 
 }
-*/
+

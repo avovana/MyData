@@ -5,7 +5,7 @@
 
 using namespace std;
 
-class Itotec : Abstract
+class Itotec : public Abstract
 {
 public:
     int count() override
