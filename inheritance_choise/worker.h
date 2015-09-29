@@ -5,11 +5,14 @@ class Abstract;
 class Worker
 {
 public:
+    enum Machine
+    {
+        PolarMachine = 11,
+        ItotecMachine = 12
+    };
+
     Worker();
-
-private:
-    Abstract *m_cutter = nullptr;
-
+    Abstract *choice(Machine machine);
 };
 
 #endif // WORKER_H

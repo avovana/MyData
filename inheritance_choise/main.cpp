@@ -1,44 +1,34 @@
 #include <iostream>
-#include "polar.h"
-#include "itotec.h"
 #include "abstract.h"
+#include "worker.h"
 
 using namespace std;
-
-Abstract *choise(bool isPolar);
 
 int main()
 {
     char ch;
-    bool isPolar;
+    Worker::Machine isPolar = Worker::PolarMachine;
     Abstract *cutter = nullptr;
+    Worker *worker = new Worker();
 
     cout<<"Please, input 'p' for Polar and 'i' for Itotec"<<endl;
     cin>>ch;
 
     switch (ch) {
     case 'p':
-        isPolar=1;
+        isPolar = Worker::PolarMachine;
         break;
     case 'i':
-        isPolar=0;
+        isPolar = Worker::ItotecMachine;
         break;
     default:
 
         break;
     }
-
-cutter = choise(isPolar);
+cutter = worker->choice(isPolar);
 cout << cutter->count();
         return 0;
 }
 
-Abstract *choise(bool isPolar)
-{
-    if(isPolar)
-        return new Polar();
-    else
-        return new Itotec();
 
-}
 
