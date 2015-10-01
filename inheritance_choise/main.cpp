@@ -1,6 +1,7 @@
 #include <iostream>
 #include "abstract.h"
 #include "worker.h"
+#include <QDebug>
 
 using namespace std;
 
@@ -11,8 +12,8 @@ int main()
     Abstract *cutter = nullptr;
     Worker *worker = new Worker();
 
-    cout<<"Please, input 'p' for Polar and 'i' for Itotec"<<endl;
-    cin>>ch;
+    qDebug() << "Please, input 'p' for Polar and 'i' for Itotec";
+    cin >> ch;
 
     switch (ch) {
     case 'p':
@@ -27,6 +28,10 @@ int main()
     }
 cutter = worker->choice(isPolar);
 cout << cutter->count();
+cout << endl;
+delete worker;
+cout << endl;
+delete cutter;
         return 0;
 }
 

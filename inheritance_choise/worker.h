@@ -1,6 +1,10 @@
 #ifndef WORKER_H
 #define WORKER_H
+#include <iostream>
+using namespace std;
 class Abstract;
+
+
 
 class Worker
 {
@@ -11,7 +15,15 @@ public:
         ItotecMachine = 12
     };
 
-    Worker();
+    Worker()
+    {
+        cout <<"Object 'Worker' has been created" << endl;
+    };
+
+    ~Worker()
+    {
+        cout <<"Object 'Worker' has been removed" << endl;
+    };
     Abstract *choice(Machine machine);
 };
 

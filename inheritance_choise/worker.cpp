@@ -2,11 +2,6 @@
 #include "polar.h"
 #include "itotec.h"
 
-Worker::Worker()
-{
-
-}
-
 Abstract *Worker::choice(Machine machine)
 {
     switch (machine)

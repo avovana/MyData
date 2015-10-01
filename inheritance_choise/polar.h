@@ -8,10 +8,20 @@ using namespace std;
 class Polar : public Abstract
 {
 public:
-    int count() override
+    Polar()
     {
-    numbers.assign(7,100);
-    return numbers.size();
+        cout <<"Object 'Polar' has been created" << endl;
+    };
+
+    ~Polar()
+    {
+        cout <<"Object 'Polar' has been removed" << endl;
+    };
+    int count(int test = 17) override
+    {
+        cout << test << endl;
+        numbers.assign(7,100);
+        return numbers.size();
     }
 private:
     vector <int> numbers;
