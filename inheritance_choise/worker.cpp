@@ -2,19 +2,19 @@
 #include "polar.h"
 #include "itotec.h"
 
-Abstract *Worker::choice(Machine machine)
+QSharedPointer<Abstract> Worker::choice(Machine machine)
 {
     switch (machine)
     {
     case PolarMachine:
-        return new Polar();
+        return QSharedPointer<Polar>::create();
         break;
     case ItotecMachine:
-        return new Itotec();
+        return QSharedPointer<Itotec>::create();
         break;
 
     default:
         break;
     }
-return nullptr;
+return QSharedPointer<Abstract>();
 }

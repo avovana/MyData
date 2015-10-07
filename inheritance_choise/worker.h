@@ -1,10 +1,10 @@
 #ifndef WORKER_H
 #define WORKER_H
 #include <iostream>
+#include <QSharedPointer>
 using namespace std;
+
 class Abstract;
-
-
 
 class Worker
 {
@@ -24,7 +24,7 @@ public:
     {
         cout <<"Object 'Worker' has been removed" << endl;
     };
-    Abstract *choice(Machine machine);
+    QSharedPointer<Abstract> choice(Machine machine);
 };
 
 #endif // WORKER_H
