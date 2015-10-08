@@ -3,11 +3,9 @@ CONFIG += console c++11
 CONFIG -= app_bundle
 
 SOURCES += main.cpp \
-    worker.cpp
+    form.cpp
 
 HEADERS += \
-    abstract.h \
-    polar.h \
-    itotec.h \
-    worker.h
+    calculation.h \
+    form.h
 
